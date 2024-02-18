@@ -13,3 +13,7 @@ hash = { a: 1, b: 2, c: 3 }
 hash.each do |k, v|
   puts "#{k}: #{v}"
 end
+
+one, *second, last = array
+
+puts one, second, last
