@@ -17,3 +17,11 @@ end
 one, *second, last = array
 
 puts one, second, last
+
+# https://docs.ruby-lang.org/ja/latest/class/Array.html#I_COUNT
+ary = %w[aaa bbbb ccc ddd eee aaa]
+puts ary.count
+puts ary.count('aaa') # aaaの数をカウント
+
+# メモ
+# レシーバ要素とは返り値のこと
