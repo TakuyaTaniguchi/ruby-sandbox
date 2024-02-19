@@ -25,3 +25,30 @@ puts ary.count('aaa') # aaaの数をカウント
 
 # メモ
 # レシーバ要素とは返り値のこと
+
+str1 = 'Taro'
+str2 = str1
+
+puts str1, str2
+
+str1 = 'Bob'
+
+puts str1, str2
+
+# Jsだとちょっと面倒な処理をrubyだと簡単に書ける？
+from = 5
+to = 10
+sum = 0
+for i in from..to
+  sum += i
+end
+puts sum
+
+# Fix each
+from = 5
+to = 10
+sum = 0
+(from..to).each do |i|
+  sum += i
+end
+puts sum
