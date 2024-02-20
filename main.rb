@@ -64,3 +64,50 @@ def max(a, b)
 end
 
 max(10, 5) # 10 jsのmapみたいにreturnを返さなくていい。がif文でそれが起こるのは慣れない感覚
+
+def myloop(my_array)
+  my_array.each do |i|
+    puts i
+  end
+end
+
+myloop([1, 2, 3, 4, 5])
+
+# 要確認
+# ブロック付き関数の呼び出し　直感的にわかりにくいがコールバック関数のようなもの
+# 　Jsで言うところの引数に関数を渡すような感じでyieldを使う
+def say_hello
+  puts 'Hello, world!'
+  yield if block_given?
+end
+
+say_hello do
+  puts 'This is a block!'
+end
+
+def say_hello_arguments
+  puts 'Hello, world!'
+  yield('Alice', 'May') if block_given?
+  yield('Bob', 'Smith') if block_given?
+end
+
+say_hello_arguments do |firstname, lastname| # 引数
+  puts "This is a block for #{firstname} #{lastname}!"
+  puts "Nice to meet you, #{firstname} #{lastname}!"
+end
+
+# 定義的には同じ、Rubyのブロッック付き組み込み関数
+new_array = [1, 2, 3].map do |num|
+  num * 2
+end
+
+puts new_array
+
+#   function sayHello(callback: () => void): void {
+#   console.log("Hello, world!");
+#   callback();
+# }
+#
+# sayHello(() => {
+#   console.log("This is a block!");
+# });
