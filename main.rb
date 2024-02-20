@@ -52,3 +52,13 @@ sum = 0
   sum += i
 end
 puts sum
+
+def max(a, b)
+  if a > b
+    a
+  else
+    b
+  end
+end
+
+max(10, 5) # 10 jsのmapみたいにreturnを返さなくていい。がif文でそれが起こるのは慣れない感覚
