@@ -24,7 +24,9 @@ puts ary.count
 puts ary.count('aaa') # aaaの数をカウント
 
 # メモ
-# レシーバ要素とは返り値のこと
+# レシーバ要素.hogeの左側
+# これが最初の導入でわかりやすい
+# https://qiita.com/you8/items/e5f5c27cfed60a23fa75
 
 str1 = 'Taro'
 str2 = str1
