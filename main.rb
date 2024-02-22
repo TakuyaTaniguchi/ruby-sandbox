@@ -111,3 +111,11 @@ puts new_array
 # sayHello(() => {
 #   console.log("This is a block!");
 # });
+
+def foo(k: 1)
+  p k
+end
+
+h = { k: 42 }
+
+foo(k: h[:k]) # 42
